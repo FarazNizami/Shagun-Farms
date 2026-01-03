@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Shagun Farms – Client Testimonials & Reviews</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="wedding venue reviews, client testimonials, shagun farms feedback, google reviews" name="keywords">
+    <meta content="Read genuine reviews and testimonials from our happy clients who celebrated their weddings and events at Shagun Farms luxury venue in Raipur." name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Montserrat', sans-serif; overflow-x: hidden; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; }
+        
+        .navbar-dark { background: #0F172B !important; height: 90px; }
+        .navbar-dark .nav-link { font-weight: 500; text-transform: uppercase; font-size: 14px; padding: 0 15px !important; height: 90px; display: flex; align-items: center; border-bottom: 3px solid transparent; transition: all 0.3s; }
+        .navbar-dark .nav-link:hover, .navbar-dark .nav-link.active { color: #FEA116; border-bottom-color: #FEA116; }
+        
+        .logo-brand { display: flex; align-items: center; gap: 20px; height: 90px; }
+        .logo-brand img { height: 70px; }
+        .brand-name { font-family: 'Playfair Display', serif; font-size: 24px; }
+        .brand-name .shagun { color: #FEA116; }
+        .brand-name .farms { color: #ffffff; }
+        .brand-tagline { font-size: 11px; color: #ffffff; letter-spacing: 1.2px; text-transform: uppercase; }
+        
+        .header-btn { height: 90px; display: flex; align-items: center; }
+        .btn-primary { background: #FEA116; border: none; padding: 12px 30px; }
+        .btn-primary:hover { background: #e68a00; transform: translateY(-3px); }
+        
+        .page-header { height: 300px; display: flex; align-items: center; justify-content: center; background: linear-gradient(rgba(15, 23, 43, 0.7), rgba(15, 23, 43, 0.7)), url(img/carousel-1.jpg); background-size: cover; color: white; }
+        
+        /* Testimonial Cards */
+        .testimonial-card { background: white; border-radius: 10px; padding: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); height: 100%; position: relative; }
+        .stars { color: #FFC107; margin-bottom: 15px; }
+        .quote { font-style: italic; color: #555; line-height: 1.7; margin-bottom: 20px; }
+        .author-img { width: 60px; height: 60px; border-radius: 50%; overflow: hidden; }
+        .author-img img { width: 100%; height: 100%; object-fit: cover; }
+        
+        .quote-icon { position: absolute; right: 20px; bottom: 20px; color: #FEA116; opacity: 0.2; font-size: 40px; }
+        
+        /* Review Stats */
+        .stats-card { background: white; border-radius: 10px; padding: 25px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+        
+        @media (max-width: 991px) {
+            .navbar-dark { height: auto; padding: 15px 0; }
+            .logo-brand { height: auto; }
+            .navbar-dark .nav-link { height: auto; padding: 12px 15px !important; border-bottom: none; border-left: 3px solid transparent; }
+            .navbar-dark .nav-link:hover, .navbar-dark .nav-link.active { border-left-color: #FEA116; }
+            .header-btn { height: auto; margin: 15px 0; }
+            .page-header { height: 250px; }
+        }
+        
+        @media (max-width: 768px) {
+            .logo-brand img { height: 60px; }
+            .brand-name { font-size: 20px; }
+            .brand-tagline { font-size: 10px; }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <div class="container-fluid bg-dark px-0">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark px-0">
+                <a href="index.html" class="navbar-brand">
+                    <div class="logo-brand">
+                        <img src="img/logo.png" alt="Shagun Farms">
+                        <div class="brand-text">
+                            <div class="brand-name"><span class="shagun">SHAGUN</span> <span class="farms">FARMS</span></div>
+                            <div class="brand-tagline">Banquet & Wedding Destination</div>
+                        </div>
+                    </div>
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto align-items-center">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="service.html" class="nav-item nav-link">Weddings & Events</a>
+                        <a href="room.html" class="nav-item nav-link">Rooms</a>
+                        <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <div class="header-btn">
+                            <a href="contact.html" class="btn btn-primary">Plan Your Event</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <div class="container-fluid page-header mb-5">
+        <div class="container text-center">
+            <h1 class="display-4 text-white mb-3">Testimonials</h1>
+            <p class="text-white">What our clients say about us</p>
+        </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="container-fluid py-5 bg-light">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-3 col-6">
+                    <div class="stats-card">
+                        <h2 class="text-primary mb-2">4.8</h2>
+                        <div class="stars mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="mb-0">Google Rating</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stats-card">
+                        <h2 class="text-primary mb-2">500+</h2>
+                        <p class="mb-0">Events Hosted</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stats-card">
+                        <h2 class="text-primary mb-2">98%</h2>
+                        <p class="mb-0">Client Satisfaction</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stats-card">
+                        <h2 class="text-primary mb-2">200+</h2>
+                        <p class="mb-0">Google Reviews</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="section-title text-center text-primary text-uppercase">Testimonials</h6>
+                <h1>What Our <span class="text-primary">Clients Say</span></h1>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Testimonial 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="quote">"Our daughter's wedding was absolutely perfect! The team at Shagun Farms handled everything professionally. The lawn setup was breathtaking and food was exceptional."</p>
+                        <div class="d-flex align-items-center">
+                            <div class="author-img me-3">
+                                <img src="img/testimonial-1.jpg" alt="Mr. & Mrs. Sharma">
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Mr. & Mrs. Sharma</h6>
+                                <small class="text-muted">Wedding Celebration · Nov 2024</small>
+                            </div>
+                        </div>
+                        <div class="quote-icon">
+                            <i class="fa fa-quote-right"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="quote">"We hosted our annual corporate conference here. The facilities were top-notch, AV equipment worked perfectly, and the team was very responsive to our needs."</p>
+                        <div class="d-flex align-items-center">
+                            <div class="author-img me-3">
+                                <img src="img/testimonial-2.jpg" alt="TechSolutions">
+                            </div>
+                            <div>
+                                <h6 class="mb-1">TechSolutions India</h6>
+                                <small class="text-muted">Corporate Event · Oct 2024</small>
+                            </div>
+                        </div>
+                        <div class="quote-icon">
+                            <i class="fa fa-quote-right"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="quote">"Our engagement ceremony was magical! The decoration team created exactly what we envisioned. Special thanks to the event manager for making our day stress-free."</p>
+                        <div class="d-flex align-items-center">
+                            <div class="author-img me-3">
+                                <img src="img/testimonial-3.jpg" alt="Rohit & Priya">
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Rohit & Priya</h6>
+                                <small class="text-muted">Engagement · Sep 2024</small>
+                            </div>
+                        </div>
+                        <div class="quote-icon">
+                            <i class="fa fa-quote-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- More Testimonials -->
+            <div class="row g-4 mt-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="quote">"Excellent service! We booked rooms for wedding guests and everyone was very comfortable. Clean rooms, good food, and polite staff. Highly recommended!"</p>
+                        <div class="d-flex align-items-center">
+                            <div class="author-img me-3">
+                                <img src="img/team-1.jpg" alt="Family">
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Patel Family</h6>
+                                <small class="text-muted">Guest Accommodation · Aug 2024</small>
+                            </div>
+                        </div>
+                        <div class="quote-icon">
+                            <i class="fa fa-quote-right"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="quote">"Perfect venue for our product launch. The banquet hall was well-equipped, and the catering service was outstanding. Looking forward to hosting more events here."</p>
+                        <div class="d-flex align-items-center">
+                            <div class="author-img me-3">
+                                <img src="img/team-2.jpg" alt="Startup">
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Startup Connect</h6>
+                                <small class="text-muted">Product Launch · Jul 2024</small>
+                            </div>
+                        </div>
+                        <div class="quote-icon">
+                            <i class="fa fa-quote-right"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="quote">"Our son's birthday party was a huge success! The team handled 100+ kids perfectly. The poolside area was ideal, and the food was delicious. Thank you!"</p>
+                        <div class="d-flex align-items-center">
+                            <div class="author-img me-3">
+                                <img src="img/team-3.jpg" alt="Parents">
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Mr. & Mrs. Singh</h6>
+                                <small class="text-muted">Birthday Party · Jun 2024</small>
+                            </div>
+                        </div>
+                        <div class="quote-icon">
+                            <i class="fa fa-quote-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Google Reviews CTA -->
+    <div class="container-fluid bg-dark text-white py-5">
+        <div class="container text-center">
+            <h3 class="mb-4">Read More Reviews on Google</h3>
+            <p class="mb-4">Join our growing family of happy clients</p>
+            <a href="https://g.page/r/CfHZ84H4N7fHEB0/review" class="btn btn-primary btn-lg py-3 px-5" target="_blank">
+                <i class="fab fa-google me-2"></i> View Google Reviews
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container-fluid bg-dark text-light footer">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <div class="bg-primary rounded p-4">
+                        <h1 class="text-white text-uppercase mb-3">Shagun Farms</h1>
+                        <p class="text-white mb-0">A luxury wedding and banquet destination near Raipur Airport.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <h6 class="section-title text-white text-uppercase mb-4">Contact</h6>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>VIP Road, near Raipur Airport, Raipur</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 6262954338</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>shagunfarm7309@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social me-2" href="https://www.facebook.com/shagunfarmsraipur" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social me-2" href="https://www.instagram.com/shagun.farms/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <h6 class="section-title text-white text-uppercase mb-4">Quick Links</h6>
+                    <a class="btn btn-link text-white mb-2" href="about.html">About Us</a>
+                    <a class="btn btn-link text-white mb-2" href="service.html">Weddings & Events</a>
+                    <a class="btn btn-link text-white mb-2" href="room.html">Rooms</a>
+                    <a class="btn btn-link text-white mb-2" href="gallery.html">Gallery</a>
+                    <a class="btn btn-link text-white mb-2" href="contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright border-top pt-4">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start">
+                        &copy; <a class="text-primary" href="index.html">Shagun Farms</a>, All Rights Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <a class="text-white me-3" href="#">Privacy</a>
+                        <a class="text-white" href="#">Terms</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        new WOW().init();
+    </script>
+</body>
+</html>
