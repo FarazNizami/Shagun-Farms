@@ -29,50 +29,7 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 
-    <style>
-        body { font-family: 'Montserrat', sans-serif; overflow-x: hidden; }
-        h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; }
-        
-        .navbar-dark { background: #0F172B !important; height: 90px; }
-        .navbar-dark .nav-link { font-weight: 500; text-transform: uppercase; font-size: 14px; padding: 0 15px !important; height: 90px; display: flex; align-items: center; border-bottom: 3px solid transparent; transition: all 0.3s; }
-        .navbar-dark .nav-link:hover, .navbar-dark .nav-link.active { color: #FEA116; border-bottom-color: #FEA116; }
-        
-        .logo-brand { display: flex; align-items: center; gap: 20px; height: 90px; }
-        .logo-brand img { height: 70px; }
-        .brand-name { font-family: 'Playfair Display', serif; font-size: 24px; }
-        .brand-name .shagun { color: #FEA116; }
-        .brand-name .farms { color: #ffffff; }
-        .brand-tagline { font-size: 11px; color: #ffffff; letter-spacing: 1.2px; text-transform: uppercase; }
-        
-        .header-btn { height: 90px; display: flex; align-items: center; }
-        .btn-primary { background: #FEA116; border: none; padding: 12px 30px; }
-        .btn-primary:hover { background: #e68a00; transform: translateY(-3px); }
-        
-        .page-header { height: 300px; display: flex; align-items: center; justify-content: center; background: linear-gradient(rgba(15, 23, 43, 0.7), rgba(15, 23, 43, 0.7)), url(img/carousel-1.jpg); background-size: cover; color: white; }
-        
-        .contact-info { background: #f8f9fa; padding: 30px; border-radius: 10px; height: 100%; }
-        .contact-info i { color: #FEA116; font-size: 24px; }
-        
-        iframe { border-radius: 10px; border: none; }
-        
-        .form-control, .form-select { padding: 12px 15px; border: 1px solid #dee2e6; }
-        .form-control:focus, .form-select:focus { border-color: #FEA116; box-shadow: 0 0 0 0.2rem rgba(254, 161, 22, 0.25); }
-        
-        @media (max-width: 991px) {
-            .navbar-dark { height: auto; padding: 15px 0; }
-            .logo-brand { height: auto; }
-            .navbar-dark .nav-link { height: auto; padding: 12px 15px !important; border-bottom: none; border-left: 3px solid transparent; }
-            .navbar-dark .nav-link:hover, .navbar-dark .nav-link.active { border-left-color: #FEA116; }
-            .header-btn { height: auto; margin: 15px 0; }
-            .page-header { height: 250px; }
-        }
-        
-        @media (max-width: 768px) {
-            .logo-brand img { height: 60px; }
-            .brand-name { font-size: 20px; }
-            .brand-tagline { font-size: 10px; }
-        }
-    </style>
+    <!-- Inline styles moved to css/style.css -->
 </head>
 
 <body>
@@ -83,7 +40,7 @@
         </div>
     </div>
 
-    <!-- Header -->
+    <!-- Header (standardized) -->
     <div class="container-fluid bg-dark px-0">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark px-0">
@@ -105,7 +62,7 @@
                     <div class="navbar-nav ms-auto align-items-center">
                         <a href="index.html" class="nav-item nav-link">Home</a>
                         <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link">Weddings & Events</a>
+                        <!-- Weddings link removed per request -->
                         <a href="room.html" class="nav-item nav-link">Rooms</a>
                         <a href="gallery.html" class="nav-item nav-link">Gallery</a>
                         <a href="contact.html" class="nav-item nav-link active">Contact</a>
@@ -146,14 +103,14 @@
                     <div class="contact-info text-center">
                         <i class="fa fa-phone-alt mb-3"></i>
                         <h4>Call Us</h4>
-                        <p>+91 6262954338<br>+91 9827194321</p>
+                        <p>+91 6262954338</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="contact-info text-center">
                         <i class="fa fa-envelope mb-3"></i>
                         <h4>Email Us</h4>
-                        <p>shagunfarm7309@gmail.com<br>info@shagunfarms.com</p>
+                        <p>shagunfarm7309@gmail.com</p>
                     </div>
                 </div>
             </div>
@@ -164,38 +121,12 @@
                         <iframe class="w-100 h-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.135277167703!2d81.60677437598904!3d21.241945880584246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28dd7c7cbfa9a7%3A0x1d9344a1cce9dc9d!2sVIP%20Rd%2C%20Raipur%2C%20Chhattisgarh!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" style="min-height: 400px;" allowfullscreen loading="lazy"></iframe>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <form>
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <input type="text" class="form-control" placeholder="Your Name" required>
-                            </div>
-                            <div class="col-md-6">
-                                <input type="email" class="form-control" placeholder="Your Email" required>
-                            </div>
-                            <div class="col-md-6">
-                                <input type="tel" class="form-control" placeholder="Phone Number" required>
-                            </div>
-                            <div class="col-md-6">
-                                <select class="form-select">
-                                    <option selected>Event Type</option>
-                                    <option>Wedding</option>
-                                    <option>Reception</option>
-                                    <option>Corporate</option>
-                                    <option>Other</option>
-                                </select>
-                            </div>
-                            <div class="col-12">
-                                <input type="text" class="form-control" placeholder="Subject">
-                            </div>
-                            <div class="col-12">
-                                <textarea class="form-control" placeholder="Message" rows="5"></textarea>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
-                            </div>
-                        </div>
-                    </form>
+                <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                    <div class="text-center w-100">
+                        <a href="https://www.makemytrip.com/hotels/hotel_shagun_farm-details-raipur_chhattisgarh.html?msockid=09f6bebb53ad680829d1a80152cf696b" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Book on MakeMyTrip</a>
+                        <p class="mt-3 text-muted">Or call us at <strong>+91 6262954338</strong> for direct booking assistance.</p>
+                        <p class="small text-muted">You will be redirected to our MakeMyTrip listing to complete the reservation.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -238,7 +169,7 @@
                 <div class="col-lg-4">
                     <h6 class="section-title text-white text-uppercase mb-4">Quick Links</h6>
                     <a class="btn btn-link text-white mb-2" href="about.html">About Us</a>
-                    <a class="btn btn-link text-white mb-2" href="service.html">Weddings & Events</a>
+                    <!-- Weddings & Events button removed per request -->
                     <a class="btn btn-link text-white mb-2" href="room.html">Rooms</a>
                     <a class="btn btn-link text-white mb-2" href="gallery.html">Gallery</a>
                     <a class="btn btn-link text-white mb-2" href="contact.html">Contact</a>

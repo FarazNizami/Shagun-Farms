@@ -1,147 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <title>Shagun Farms – Book Your Wedding & Events</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="book wedding venue, event booking, banquet hall reservation, room booking raipur" name="keywords">
-    <meta content="Book your dream wedding or event at Shagun Farms. Complete booking form for venues, rooms, and events with instant enquiry response." name="description">
-
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-
-    <!-- Custom Styles -->
-    <style>
-        /* Global Overrides */
-        body {
-            overflow-x: hidden;
-            font-family: 'Montserrat', sans-serif;
-        }
-        
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 600;
-        }
-        
-        /* Header Styling - Professional and Well Aligned */
-        .navbar {
-            padding: 0;
-        }
-        
-        .navbar-dark {
-            background: #0F172B !important;
-            height: 90px;
-        }
-        
-        .navbar-dark .navbar-nav {
-            align-items: center;
-        }
-        
-        .navbar-dark .navbar-nav .nav-link {
-            font-weight: 500;
-            text-transform: uppercase;
-            font-size: 14px;
-            padding: 0 15px !important;
-            height: 90px;
-            display: flex;
-            align-items: center;
-            border-bottom: 3px solid transparent;
-            transition: all 0.3s ease;
-        }
-        
-        .navbar-dark .navbar-nav .nav-link:hover,
-        .navbar-dark .navbar-nav .nav-link.active {
-            color: #FEA116;
-            border-bottom-color: #FEA116;
-        }
-        
-        /* Logo Styling - Professional */
-        .logo-brand {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            height: 90px;
-            padding: 10px 0;
-        }
-        
-        .logo-brand img {
-            height: 70px;
-            width: auto;
-        }
-        
-        .brand-text {
-            line-height: 1.1;
-        }
-        
-        .brand-name {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            font-size: 24px;
-            letter-spacing: 0.5px;
-            margin: 0;
-        }
-        
-        .brand-name .shagun {
-            color: #FEA116;
-        }
-        
-        .brand-name .farms {
-            color: #ffffff;
-        }
-        
-        .brand-tagline {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 11px;
-            color: #ffffff;
-            font-weight: 400;
-            letter-spacing: 1.2px;
-            margin-top: 4px;
-            text-transform: uppercase;
-            opacity: 0.9;
-        }
-        
-        /* Header Button - Proper Alignment */
-        .header-btn {
-            height: 90px;
-            display: flex;
-            align-items: center;
-            margin-left: 20px;
-        }
-        
-        .header-btn .btn {
-            white-space: nowrap;
-        }
-        
-        /* Button Enhancements */
-        .btn-primary {
-            background: #FEA116;
-            border: none;
-            padding: 14px 35px;
-            transition: all 0.3s ease;
-            font-weight: 500;
-            border-radius: 0;
-            letter-spacing: 0.5px;
-        }
+    <!-- Inline styles moved to css/style.css -->
         
         .btn-primary:hover {
             background: #e68a00;
@@ -275,78 +132,23 @@
         }
         
         /* Responsive Fixes */
+        /* Responsive tweaks kept; header/navbar rules are centralized in css/style.css */
         @media (max-width: 1199px) {
-            .navbar-dark .navbar-nav .nav-link {
-                padding: 0 12px !important;
-                font-size: 13px;
-            }
+            .navbar-dark .navbar-nav .nav-link { padding: 0 12px !important; font-size: 13px; }
         }
-        
+
         @media (max-width: 991px) {
-            .navbar-dark {
-                height: auto;
-                padding: 15px 0;
-            }
-            
-            .logo-brand {
-                height: auto;
-                padding: 0;
-            }
-            
-            .navbar-dark .navbar-nav .nav-link {
-                height: auto;
-                padding: 12px 15px !important;
-                border-bottom: none;
-                border-left: 3px solid transparent;
-            }
-            
-            .navbar-dark .navbar-nav .nav-link:hover,
-            .navbar-dark .navbar-nav .nav-link.active {
-                border-left-color: #FEA116;
-                border-bottom: none;
-            }
-            
-            .header-btn {
-                height: auto;
-                margin: 15px 0;
-                justify-content: center;
-            }
-            
-            .page-header {
-                height: 300px;
-            }
-            
-            .booking-steps {
-                flex-wrap: wrap;
-            }
-            
-            .step {
-                margin-bottom: 20px;
-                width: 50%;
-            }
+            .page-header { height: 300px; }
+            .booking-steps { flex-wrap: wrap; }
+            .step { margin-bottom: 20px; width: 50%; }
         }
-        
+
         @media (max-width: 768px) {
-            .logo-brand {
-                gap: 15px;
-            }
-            
-            .logo-brand img {
-                height: 60px;
-            }
-            
-            .brand-name {
-                font-size: 20px;
-            }
-            
-            .brand-tagline {
-                font-size: 10px;
-            }
-            
-            .step {
-                width: 100%;
-                margin-bottom: 30px;
-            }
+            .logo-brand { gap: 15px; }
+            .logo-brand img { height: 60px; }
+            .brand-name { font-size: 20px; }
+            .brand-tagline { font-size: 10px; }
+            .step { width: 100%; margin-bottom: 30px; }
         }
     </style>
 </head>
@@ -359,7 +161,7 @@
         </div>
     </div>
 
-    <!-- Header -->
+    <!-- Header (standardized) -->
     <div class="container-fluid bg-dark px-0">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark px-0">
@@ -381,7 +183,7 @@
                     <div class="navbar-nav ms-auto align-items-center">
                         <a href="index.html" class="nav-item nav-link">Home</a>
                         <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link">Weddings & Events</a>
+                        <!-- Weddings link removed per request -->
                         <a href="room.html" class="nav-item nav-link">Rooms</a>
                         <a href="gallery.html" class="nav-item nav-link">Gallery</a>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
@@ -470,94 +272,10 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="booking-form wow fadeInUp" data-wow-delay="0.2s">
-                        <form id="bookingForm">
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name" required>
-                                        <label for="name">Your Name</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email" required>
-                                        <label for="email">Your Email</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="tel" class="form-control" id="phone" placeholder="Phone Number" required>
-                                        <label for="phone">Phone Number</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="eventDate" placeholder="Event Date" onfocus="(this.type='date')" onblur="(this.type='text')" required>
-                                        <label for="eventDate">Event Date</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <select class="form-select" id="eventType" required>
-                                            <option value="">Select Event Type</option>
-                                            <option value="wedding">Wedding</option>
-                                            <option value="reception">Reception</option>
-                                            <option value="engagement">Engagement</option>
-                                            <option value="birthday">Birthday</option>
-                                            <option value="corporate">Corporate Event</option>
-                                            <option value="other">Other</option>
-                                        </select>
-                                        <label for="eventType">Event Type</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <select class="form-select" id="guests" required>
-                                            <option value="">No. of Guests</option>
-                                            <option value="100-300">100-300</option>
-                                            <option value="300-600">300-600</option>
-                                            <option value="600-1000">600-1000</option>
-                                            <option value="1000+">1000+</option>
-                                        </select>
-                                        <label for="guests">No. of Guests</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <select class="form-select" id="venue" required>
-                                            <option value="">Select Venue</option>
-                                            <option value="grand-ballroom">Grand Ballroom</option>
-                                            <option value="poolside-lawn">Poolside Lawn</option>
-                                            <option value="banquet-hall">Banquet Hall</option>
-                                            <option value="not-sure">Not Sure - Need Suggestions</option>
-                                        </select>
-                                        <label for="venue">Select Venue</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Special Requirements" id="requirements" style="height: 100px"></textarea>
-                                        <label for="requirements">Special Requirements</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="roomsRequired">
-                                        <label class="form-check-label" for="roomsRequired">
-                                            Also require room accommodations for guests
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Submit Booking Request</button>
-                                </div>
-                                <div class="col-12">
-                                    <p class="text-center text-muted mb-0">
-                                        <small>We'll contact you within 2 hours to discuss details and provide a custom quote.</small>
-                                    </p>
-                                </div>
-                            </div>
-                        </form>
+                        <div class="text-center">
+                            <a href="https://www.makemytrip.com/hotels/hotel_shagun_farm-details-raipur_chhattisgarh.html?msockid=09f6bebb53ad680829d1a80152cf696b" class="btn btn-primary btn-lg w-100" target="_blank" rel="noopener">Book on MakeMyTrip</a>
+                            <p class="text-center text-muted mt-3 mb-0"><small>After clicking, you'll be taken to MakeMyTrip to complete booking.</small></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -606,7 +324,7 @@
                 <div class="col-lg-4">
                     <h6 class="section-title text-white text-uppercase mb-4">Quick Links</h6>
                     <a class="btn btn-link text-white mb-2" href="about.html">About Us</a>
-                    <a class="btn btn-link text-white mb-2" href="service.html">Weddings & Events</a>
+                    <!-- Weddings & Events button removed per request -->
                     <a class="btn btn-link text-white mb-2" href="room.html">Rooms</a>
                     <a class="btn btn-link text-white mb-2" href="gallery.html">Gallery</a>
                     <a class="btn btn-link text-white mb-2" href="contact.html">Contact</a>
@@ -644,30 +362,6 @@
     <script>
         // Initialize WOW.js
         new WOW().init();
-        
-        // Form Submission
-        document.getElementById('bookingForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Simple validation
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            const eventDate = document.getElementById('eventDate').value;
-            const eventType = document.getElementById('eventType').value;
-            const guests = document.getElementById('guests').value;
-            const venue = document.getElementById('venue').value;
-            
-            if (!name || !email || !phone || !eventDate || !eventType || !guests || !venue) {
-                alert('Please fill all required fields.');
-                return;
-            }
-            
-            // Here you would typically send the data to your server
-            // For now, we'll show a success message
-            alert('Thank you! Your booking request has been submitted. We will contact you within 2 hours.');
-            document.getElementById('bookingForm').reset();
-        });
     </script>
 </body>
 </html>

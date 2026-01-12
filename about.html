@@ -42,94 +42,7 @@
             font-weight: 600;
         }
         
-        /* Header Styling - Professional and Well Aligned */
-        .navbar {
-            padding: 0;
-        }
-        
-        .navbar-dark {
-            background: #0F172B !important;
-            height: 90px;
-        }
-        
-        .navbar-dark .navbar-nav {
-            align-items: center;
-        }
-        
-        .navbar-dark .navbar-nav .nav-link {
-            font-weight: 500;
-            text-transform: uppercase;
-            font-size: 14px;
-            padding: 0 15px !important;
-            height: 90px;
-            display: flex;
-            align-items: center;
-            border-bottom: 3px solid transparent;
-            transition: all 0.3s ease;
-        }
-        
-        .navbar-dark .navbar-nav .nav-link:hover,
-        .navbar-dark .navbar-nav .nav-link.active {
-            color: #FEA116;
-            border-bottom-color: #FEA116;
-        }
-        
-        /* Logo Styling - Professional */
-        .logo-brand {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            height: 90px;
-            padding: 10px 0;
-        }
-        
-        .logo-brand img {
-            height: 70px;
-            width: auto;
-        }
-        
-        .brand-text {
-            line-height: 1.1;
-        }
-        
-        .brand-name {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            font-size: 24px;
-            letter-spacing: 0.5px;
-            margin: 0;
-        }
-        
-        .brand-name .shagun {
-            color: #FEA116;
-        }
-        
-        .brand-name .farms {
-            color: #FEA116;
-        }
-        
-        .brand-tagline {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 11px;
-            color: #ffffff;
-            font-weight: 400;
-            letter-spacing: 1.2px;
-            margin-top: 4px;
-            text-transform: uppercase;
-            opacity: 0.9;
-        }
-        
-        /* Header Button - Proper Alignment */
-        .header-btn {
-            height: 90px;
-            display: flex;
-            align-items: center;
-            margin-left: 20px;
-        }
-        
-        .header-btn .btn {
-            white-space: nowrap;
-        }
+        /* Header styling centralized in css/style.css */
         
         /* Button Enhancements */
         .btn-primary {
@@ -204,66 +117,20 @@
             text-align: center;
         }
         
-        /* Responsive Fixes */
+        /* Responsive fixes kept; header/navbar rules are centralized in css/style.css */
         @media (max-width: 1199px) {
-            .navbar-dark .navbar-nav .nav-link {
-                padding: 0 12px !important;
-                font-size: 13px;
-            }
+            .navbar-dark .navbar-nav .nav-link { padding: 0 12px !important; font-size: 13px; }
         }
-        
+
         @media (max-width: 991px) {
-            .navbar-dark {
-                height: auto;
-                padding: 15px 0;
-            }
-            
-            .logo-brand {
-                height: auto;
-                padding: 0;
-                gap: 12px;
-            }
-            
-            .navbar-dark .navbar-nav .nav-link {
-                height: auto;
-                padding: 12px 15px !important;
-                border-bottom: none;
-                border-left: 3px solid transparent;
-            }
-            
-            .navbar-dark .navbar-nav .nav-link:hover,
-            .navbar-dark .navbar-nav .nav-link.active {
-                border-left-color: #FEA116;
-                border-bottom: none;
-            }
-            
-            .header-btn {
-                height: auto;
-                margin: 15px 0;
-                justify-content: center;
-            }
-            
-            .page-header {
-                height: 300px;
-            }
+            .page-header { height: 300px; }
         }
-        
+
         @media (max-width: 768px) {
-            .logo-brand {
-                gap: 10px;
-            }
-            
-            .logo-brand img {
-                height: 60px;
-            }
-            
-            .brand-name {
-                font-size: 20px;
-            }
-            
-            .brand-tagline {
-                font-size: 10px;
-            }
+            .logo-brand { gap: 10px; }
+            .logo-brand img { height: 60px; }
+            .brand-name { font-size: 20px; }
+            .brand-tagline { font-size: 10px; }
         }
     </style>
 </head>
@@ -276,7 +143,7 @@
         </div>
     </div>
 
-    <!-- Header -->
+    <!-- Header (standardized) -->
     <div class="container-fluid bg-dark px-0">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark px-0">
@@ -285,7 +152,7 @@
                         <img src="img/logo.png" alt="Shagun Farms">
                         <div class="brand-text">
                             <div class="brand-name"><span class="shagun">SHAGUN</span> <span class="farms">FARMS</span></div>
-                            <div class="brand-tagline">Banquet & Hotel</div>
+                            <div class="brand-tagline">Banquet & Wedding Destination</div>
                         </div>
                     </div>
                 </a>
@@ -298,9 +165,9 @@
                     <div class="navbar-nav ms-auto align-items-center">
                         <a href="index.html" class="nav-item nav-link">Home</a>
                         <a href="about.html" class="nav-item nav-link active">About</a>
-
+                        <!-- Weddings link removed per request -->
                         <a href="room.html" class="nav-item nav-link">Rooms</a>
-                   
+                        <a href="gallery.html" class="nav-item nav-link">Gallery</a>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                         <div class="header-btn">
                             <a href="contact.html" class="btn btn-primary">Plan Your Event</a>
@@ -463,7 +330,7 @@
                 <div class="col-lg-4">
                     <h6 class="section-title text-white text-uppercase mb-4">Quick Links</h6>
                     <a class="btn btn-link text-white mb-2" href="about.html">About Us</a>
-                    <a class="btn btn-link text-white mb-2" href="service.html">Weddings & Events</a>
+                    <!-- Weddings & Events button removed per request -->
                     <a class="btn btn-link text-white mb-2" href="room.html">Rooms</a>
                     <a class="btn btn-link text-white mb-2" href="gallery.html">Gallery</a>
                     <a class="btn btn-link text-white mb-2" href="contact.html">Contact</a>

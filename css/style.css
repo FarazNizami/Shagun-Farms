@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-    --primary: #FEA116;
+    --primary: #E38B00; /* slightly deeper gold for a more upmarket feel */
     --light: #F1F8FF;
     --dark: #0F172B;
 }
@@ -314,6 +314,125 @@
     }
 }
 
+/* --- Appended styles moved from testimonial.html --- */
+body { font-family: 'Montserrat', sans-serif; overflow-x: hidden; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; }
+.navbar-dark { background: #0F172B !important; height: 90px; }
+.navbar-dark .nav-link { font-weight: 500; text-transform: uppercase; font-size: 14px; padding: 0 15px !important; height: 90px; display: flex; align-items: center; border-bottom: 3px solid transparent; transition: all 0.3s; }
+.navbar-dark .nav-link:hover, .navbar-dark .nav-link.active { color: #FEA116; border-bottom-color: #FEA116; }
+.logo-brand { display: flex; align-items: center; gap: 20px; height: 90px; }
+.logo-brand img { height: 70px; }
+.brand-name { font-family: 'Playfair Display', serif; font-size: 21.6px; }
+.brand-name .shagun { color: #ffffff; }
+.brand-name .farms { color: #ffffff; }
+.brand-tagline { font-size: 11px; color: #ffffff; letter-spacing: 1.2px; text-transform: uppercase; }
+.header-btn { height: 90px; display: flex; align-items: center; }
+/* Refined primary button */
+.btn-primary {
+    background: var(--primary);
+    border: none;
+    padding: 12px 28px;
+    transition: all 220ms ease;
+    font-weight: 600;
+    border-radius: 28px;
+    letter-spacing: 0.6px;
+    box-shadow: 0 8px 20px rgba(227, 139, 0, 0.12);
+}
+.btn-primary:hover {
+    background: #cf7a00;
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 18px 40px rgba(203, 122, 0, 0.14);
+}
+.page-header { height: 300px; display: flex; align-items: center; justify-content: center; background: linear-gradient(rgba(15, 23, 43, 0.7), rgba(15, 23, 43, 0.7)), url(../img/carousel-1.jpg); background-size: cover; color: white; }
+/* Hero / Carousel refined */
+.hero-caption { max-width: 1000px; text-align: center; padding: 40px; }
+.hero-caption .kicker { display: inline-block; background: linear-gradient(90deg, rgba(227,139,0,0.12), transparent); color: var(--light); padding: 8px 16px; border-radius: 999px; font-size: 12px; letter-spacing: 1.8px; text-transform: uppercase; }
+.hero-caption h1 { font-size: 3.2rem; line-height: 1.03; margin: 18px 0; font-weight: 700; }
+.hero-caption p.lead { font-size: 1.05rem; color: rgba(255,255,255,0.92); margin-bottom: 20px; }
+
+/* Upmarket cards */
+.card-upmarket { border-radius: 12px; overflow: hidden; box-shadow: 0 18px 40px rgba(15,23,43,0.08); border: none; }
+.card-upmarket .card-img-top { object-fit: cover; height: 220px; }
+
+/* Slightly increase base font sizes and letter spacing */
+body { font-size: 15px; letter-spacing: 0.01em; }
+h1, h2, h3, h4, h5, h6 { letter-spacing: -0.01em; }
+
+/* Room upgrades inspired by Hotel Arena: larger image, soft card, subtle overlay */
+.room-item.card-upmarket { border-radius: 14px; padding: 0; overflow: hidden; box-shadow: 0 24px 60px rgba(15,23,43,0.08); border: none; }
+.room-item.card-upmarket .room-img-container { height: 380px; }
+.room-item.card-upmarket .room-img-container img { transition: transform 0.8s ease; }
+.room-item.card-upmarket:hover .room-img-container img { transform: scale(1.03); }
+.room-item.card-upmarket .room-content { padding: 28px; }
+
+/* Testimonial refinements */
+.testimonial-card.card-upmarket { border-radius: 12px; padding: 30px; box-shadow: 0 20px 50px rgba(15,23,43,0.08); }
+.testimonial-card.card-upmarket .quote { color: #333; font-size: 15px; }
+.testimonial-card.card-upmarket .author { color: #0F172B; font-weight: 700; }
+
+/* Section containers slightly tighter for a premium layout */
+.container-xxl, .container { max-width: 1200px; }
+
+/* Subtle separators */
+.section-divider { height: 1px; background: rgba(15,23,43,0.06); margin: 40px 0; }
+.testimonial-card { background: white; border-radius: 10px; padding: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); height: 100%; position: relative; }
+.stars { color: #FFC107; margin-bottom: 15px; }
+.quote { font-style: italic; color: #555; line-height: 1.7; margin-bottom: 20px; }
+.author-img { width: 60px; height: 60px; border-radius: 50%; overflow: hidden; }
+.author-img img { width: 100%; height: 100%; object-fit: cover; }
+.quote-icon { position: absolute; right: 20px; bottom: 20px; color: #fffffd; opacity: 0.2; font-size: 40px; }
+
+/* --- Appended styles moved from docs!/index2.html --- */
+/* Header fixes and carousel/room/button styles from docs index2 */
+.navbar-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.navbar-dark .navbar-nav .nav-link { padding: 0 18px !important; color: #fff; }
+.carousel-caption { position: relative; z-index: 2; background: transparent !important; padding: 50px; max-width: 800px; margin: 0 auto; text-align: center; }
+.carousel-caption h6.section-title { font-size: 18px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 25px; color: #FEA116; }
+.carousel-caption .display-3 { font-size: 3.5rem; margin-bottom: 30px; line-height: 1.2; }
+.carousel-control-prev, .carousel-control-next { width: 60px; height: 60px; top: 50%; transform: translateY(-50%); background: rgba(0, 0, 0, 0.3); border-radius: 50%; z-index: 3; }
+.room-section { padding: 100px 0; }
+.room-item { height: auto; min-height: 570px; display: flex; flex-direction: column; border: 1px solid #eee; border-radius: 12px; overflow: hidden; transition: all 0.4s ease; background: white; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+.room-img-container { height: 350px; overflow: hidden; flex-shrink: 0; }
+.room-img-container img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+.btn-primary { background: #FEA116; border: none; padding: 14px 35px; transition: all 0.3s ease; font-weight: 500; border-radius: 0; letter-spacing: 0.5px; }
+
+/* Backward-compat: some pages use .room-img instead of .room-img-container */
+.room-img { height: 350px; overflow: hidden; flex-shrink: 0; position: relative; }
+.room-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.room-img .room-price { position: absolute; right: 12px; bottom: 12px; background: rgba(0,0,0,0.6); color: #fff; padding: 8px 12px; border-radius: 6px; font-weight: 600; }
+
+/* Gallery cards */
+.gallery-card { display: flex; gap: 30px; align-items: center; padding: 28px; background: #fff; border-radius: 12px; box-shadow: 0 14px 40px rgba(0,0,0,0.07); transition: transform 0.35s ease, box-shadow 0.35s ease; }
+.gallery-card:hover { transform: translateY(-6px); box-shadow: 0 30px 60px rgba(0,0,0,0.12); }
+.gallery-img { flex: 0 0 65%; overflow: hidden; border-radius: 12px; }
+.gallery-img img { width: 100%; height: 480px; object-fit: cover; display: block; transition: transform 0.6s ease; border-radius: 12px; }
+.gallery-card:hover .gallery-img img { transform: scale(1.03); }
+.gallery-card .gallery-content { flex: 1 1 35%; }
+.gallery-card h3 { margin-bottom: 10px; font-size: 1.25rem; }
+.gallery-card p { margin-bottom: 0; color: #6c757d; font-size: 0.95rem; }
+
+@media (max-width: 991.98px) {
+    .gallery-card { flex-direction: column-reverse; text-align: center; }
+    .gallery-img { width: 100%; flex: 0 0 auto; }
+    .gallery-img img { height: 320px; }
+    .gallery-card .gallery-content { padding: 18px 0; }
+}
+
+@media (max-width: 575.98px) {
+    .gallery-img img { height: 220px; }
+    .gallery-card { padding: 18px; }
+    .gallery-card h3 { font-size: 1.1rem; }
+    .gallery-card p { font-size: 0.9rem; }
+}
+
+/* --- Appended styles moved from docs!/indexdeep.html --- */
+/* Similar header and room styles from docs indexdeep */
+.room-item { height: auto; display: flex; flex-direction: column; border: 1px solid #eee; border-radius: 12px; overflow: hidden; transition: all 0.4s ease; background: white; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+.room-img-container { height: 350px; overflow: hidden; flex-shrink: 0; }
+.room-description { flex-grow: 1; margin: 15px 0; line-height: 1.7; color: #555; font-size: 14px; }
+.testimonial-section { background: linear-gradient(rgba(15, 23, 43, 0.95), rgba(15, 23, 43, 0.95)), url(../img/carousel-2.jpg); background-size: cover; background-position: center; padding: 100px 0; }
+.testimonial-card { background: white; border-radius: 12px; padding: 35px; height: 100%; position: relative; box-shadow: 0 10px 30px rgba(0,0,0,0.1); display: flex; flex-direction: column; }
+
 #videoModal {
     z-index: 99999;
 }
@@ -400,12 +519,235 @@
     z-index: 1;
 }
 
+/* --- Appended styles moved from index.html --- */
+/* Global Overrides */
+body {
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+}
+
+/* Header Container Fix - Removes white spaces */
+.container-fluid.bg-dark.px-0 {
+    padding: 0;
+}
+
+.container-fluid.bg-dark.px-0 .container {
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Header Styling - Professional and Well Aligned */
+.navbar {
+    padding: 0;
+}
+
+.navbar-dark {
+    background: #0F172B !important;
+    height: 90px;
+}
+
+.navbar-dark .navbar-nav {
+    align-items: center;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 0 15px !important;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #FEA116;
+    border-bottom-color: #FEA116;
+}
+
+/* Logo Styling */
+.logo-brand {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: 90px;
+    padding: 10px 0;
+}
+
+.logo-brand img {
+    height: 70px;
+    width: auto;
+}
+
+.brand-text {
+    line-height: 1.1;
+}
+
+.brand-name {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+.brand-name .shagun,
+.brand-name .farms {
+    color: #ffffff;
+}
+
+.brand-tagline {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    color: #ffffff;
+    font-weight: 400;
+    letter-spacing: 1.2px;
+    margin-top: 4px;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+/* Header Button */
+.header-btn {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.header-btn .btn {
+    white-space: nowrap;
+}
+
+/* Room Cards */
+.room-section { padding: 100px 0; }
+.room-item {
+    height: auto;
+    min-height: 570px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+.room-item:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+.room-img-container { height: 350px; overflow: hidden; flex-shrink: 0; }
+.room-img-container img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+.room-item:hover .room-img-container img { transform: scale(1.08); }
+.room-content { padding: 30px; flex-grow: 1; display: flex; flex-direction: column; }
+.room-size { display: inline-block; background: #FEA116; color: white; padding: 5px 12px; border-radius: 4px; font-size: 12px; font-weight: 500; margin-bottom: 15px; letter-spacing: 0.5px; }
+.room-features { margin: 15px 0; }
+.room-features small { font-size: 13px; color: #666; }
+.room-description { flex-grow: 1; margin: 15px 0; line-height: 1.7; color: #555; font-size: 14px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; min-height: 100px; }
+.room-content > .d-flex:last-child { margin-top: 20px; padding-top: 15px; border-top: 1px solid #eee; }
+
+/* Testimonial Cards */
+.testimonial-section { background: linear-gradient(rgba(15, 23, 43, 0.95), rgba(15, 23, 43, 0.95)), url(../img/carousel-2.jpg); background-size: cover; background-position: center; padding: 100px 0; }
+.testimonial-card { background: white; border-radius: 12px; padding: 35px; height: 100%; position: relative; box-shadow: 0 10px 30px rgba(0,0,0,0.1); display: flex; flex-direction: column; }
+.testimonial-card .stars { color: #FFC107; margin-bottom: 20px; font-size: 15px; }
+.testimonial-card .quote { font-style: italic; color: #555; line-height: 1.8; margin-bottom: 25px; font-size: 15px; flex-grow: 1; min-height: 140px; }
+.testimonial-card .author { font-weight: 600; color: #0F172B; margin-bottom: 5px; font-size: 16px; }
+.testimonial-card .type { color: #777; font-size: 13px; }
+.quote-icon { position: absolute; right: 25px; bottom: 25px; color: #FEA116; opacity: 0.15; font-size: 50px; }
+
+/* Video Section */
+.video-section { position: relative; height: 450px; background: #0F172B; overflow: hidden; border-radius: 10px; }
+.video-container { width: 100%; height: 100%; }
+.video-container video { width: 100%; height: 100%; object-fit: cover; }
+.video-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 43, 0.4); display: flex; align-items: center; justify-content: center; }
+.video-play-btn { width: 80px; height: 80px; background: #FEA116; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; text-decoration: none; transition: all 0.3s ease; cursor: pointer; border: none; }
+.video-play-btn:hover { background: #e68a00; transform: scale(1.1); color: white; }
+
+/* Button Enhancements */
+.btn-primary { background: var(--primary); border: none; padding: 12px 28px; transition: all 220ms ease; font-weight: 600; border-radius: 28px; letter-spacing: 0.6px; box-shadow: 0 8px 20px rgba(227, 139, 0, 0.12); }
+.btn-primary:hover { background: #cf7a00; transform: translateY(-3px) scale(1.02); box-shadow: 0 18px 40px rgba(203, 122, 0, 0.14); }
+.btn-light { background: rgba(255,255,255,0.95); color: var(--dark); padding: 10px 26px; border-radius: 28px; box-shadow: 0 6px 18px rgba(15,23,43,0.06); }
+.btn-light:hover { background: #f8f9fa; transform: translateY(-3px); }
+
+@media (max-width: 1199px) {
+    .navbar-dark .navbar-nav .nav-link { padding: 0 12px !important; font-size: 13px; }
+}
+
+@media (max-width: 991px) {
+    .navbar-dark { height: auto; padding: 15px 0; }
+    .logo-brand { height: auto; padding: 0; }
+    .navbar-dark .navbar-nav .nav-link { height: auto; padding: 12px 15px !important; border-bottom: none; border-left: 3px solid transparent; }
+    .navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link.active { border-left-color: #FEA116; border-bottom: none; }
+    .header-btn { height: auto; margin: 15px 0; justify-content: center; }
+    .room-item { margin-bottom: 40px; }
+    .room-img-container { height: 300px; }
+    .room-description { -webkit-line-clamp: 3; min-height: 85px; }
+    .testimonial-card .quote { min-height: auto; }
+}
+
+@media (max-width: 768px) {
+    .logo-brand { gap: 15px; }
+    .logo-brand img { height: 60px; }
+    .brand-name { font-size: 20px; }
+    .brand-tagline { font-size: 10px; }
+    .room-img-container { height: 280px; }
+    .room-description { -webkit-line-clamp: 3; min-height: 80px; }
+    .video-section { height: 350px; }
+}
+
+/* Booking Form */
+.booking-form { background: white; border-radius: 12px; padding: 30px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+
+/* Section Spacing */
+.section-padding { padding: 100px 0; }
+.section-title { position: relative; display: inline-block; font-size: 18px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 25px; color: #FEA116; }
+.section-title::before { content: ""; position: absolute; left: -60px; top: 50%; width: 50px; height: 2px; background: #FEA116; }
+.section-title::after { content: ""; position: absolute; right: -60px; top: 50%; width: 50px; height: 2px; background: #FEA116; }
+
+/* Carousel Improvements */
+.carousel-item { height: 700px; }
+.carousel-item img { width: 100%; height: 100%; object-fit: cover; }
+.carousel-caption { background: rgba(15, 23, 43, 0.7); padding: 50px; border-radius: 10px; max-width: 800px; margin: 0 auto; }
+.carousel-control-prev, .carousel-control-next { background: rgba(0, 0, 0, 0.3); width: 60px; height: 60px; top: 50%; transform: translateY(-50%); border-radius: 50%; }
+
+@media (max-width: 768px) {
+    .carousel-item { height: 500px; }
+    .carousel-caption { padding: 30px; }
+    .carousel-caption h1 { font-size: 28px; }
+    .carousel-control-prev, .carousel-control-next { width: 40px; height: 40px; }
+}
+
 
 /*** Footer ***/
 .footer {
     position: relative;
-    margin-top: -110px;
-    padding-top: 180px;
+    /* Remove negative overlap and use consistent spacing */
+    margin-top: 60px;
+    padding-top: 80px;
+    padding-bottom: 40px;
+}
+
+@media (max-width: 991.98px) {
+    .footer {
+        margin-top: 40px;
+        padding-top: 60px;
+        padding-bottom: 30px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .footer {
+        margin-top: 30px;
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
 }
 
 .footer .btn.btn-social {
@@ -471,5 +813,3 @@
     padding-right: 0;
     border-right: none;
 }
-
-/* Team section removed as requested */

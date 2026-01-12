@@ -30,526 +30,7 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 
-    <!-- Custom Styles -->
-    <style>
-        /* Global Overrides */
-        body {
-            overflow-x: hidden;
-            font-family: 'Montserrat', sans-serif;
-        }
-        
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 600;
-        }
-        
-        /* Header Container Fix - Removes white spaces */
-        .container-fluid.bg-dark.px-0 {
-            padding: 0;
-        }
-        
-        .container-fluid.bg-dark.px-0 .container {
-            max-width: 100%;
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-        
-        /* Header Styling - Professional and Well Aligned */
-        .navbar {
-            padding: 0;
-        }
-        
-        .navbar-dark {
-            background: #0F172B !important;
-            height: 90px;
-        }
-        
-        .navbar-dark .navbar-nav {
-            align-items: center;
-        }
-        
-        .navbar-dark .navbar-nav .nav-link {
-            font-weight: 500;
-            text-transform: uppercase;
-            font-size: 14px;
-            padding: 0 15px !important;
-            height: 90px;
-            display: flex;
-            align-items: center;
-            border-bottom: 3px solid transparent;
-            transition: all 0.3s ease;
-        }
-        
-        .navbar-dark .navbar-nav .nav-link:hover,
-        .navbar-dark .navbar-nav .nav-link.active {
-            color: #FEA116;
-            border-bottom-color: #FEA116;
-        }
-        
-        /* Logo Styling - Professional with LEFT ALIGNMENT */
-        .logo-brand {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            height: 90px;
-            padding: 10px 0;
-        }
-        
-        .logo-brand img {
-            height: 70px;
-            width: auto;
-        }
-        
-        .brand-text {
-            line-height: 1.1;
-        }
-        
-        .brand-name {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            font-size: 24px;
-            letter-spacing: 0.5px;
-            margin: 0;
-        }
-        
-        .brand-name .shagun {
-            color: #FEA116;
-        }
-        
-        .brand-name .farms {
-            color: #FEA116; /* Changed to orange */
-        }
-        
-        .brand-tagline {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 11px;
-            color: #ffffff;
-            font-weight: 400;
-            letter-spacing: 1.2px;
-            margin-top: 4px;
-            text-transform: uppercase;
-            opacity: 0.9;
-        }
-        
-        /* Header Button - Proper Alignment */
-        .header-btn {
-            height: 90px;
-            display: flex;
-            align-items: center;
-            margin-left: 20px;
-        }
-        
-        .header-btn .btn {
-            white-space: nowrap;
-        }
-        
-        /* Room Cards - FIXED: No text cropping */
-        .room-section {
-            padding: 100px 0;
-        }
-        
-        .room-item {
-            height: auto; /* Changed from 570px to auto */
-            min-height: 570px; /* Minimum height */
-            display: flex;
-            flex-direction: column;
-            border: 1px solid #eee;
-            border-radius: 12px;
-            overflow: hidden;
-            transition: all 0.4s ease;
-            background: white;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-        
-        .room-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-        
-        .room-img-container {
-            height: 350px;
-            overflow: hidden;
-            flex-shrink: 0;
-        }
-        
-        .room-img-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.6s ease;
-        }
-        
-        .room-item:hover .room-img-container img {
-            transform: scale(1.08);
-        }
-        
-        .room-content {
-            padding: 30px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .room-size {
-            display: inline-block;
-            background: #FEA116;
-            color: white;
-            padding: 5px 12px;
-            border-radius: 4px;
-            font-size: 12px;
-            font-weight: 500;
-            margin-bottom: 15px;
-            letter-spacing: 0.5px;
-        }
-        
-        .room-features {
-            margin: 15px 0;
-        }
-        
-        .room-features small {
-            font-size: 13px;
-            color: #666;
-        }
-        
-        .room-description {
-            flex-grow: 1;
-            margin: 15px 0;
-            line-height: 1.7;
-            color: #555;
-            font-size: 14px;
-            overflow: hidden;
-            display: -webkit-box;
-            -webkit-line-clamp: 4; /* Limits to 4 lines */
-            -webkit-box-orient: vertical;
-            min-height: 100px; /* Minimum height for consistency */
-        }
-        
-        .room-content > .d-flex:last-child {
-            margin-top: 20px;
-            padding-top: 15px;
-            border-top: 1px solid #eee;
-        }
-        
-        /* Testimonial Cards - Fixed Cropping */
-        .testimonial-section {
-            background: linear-gradient(rgba(15, 23, 43, 0.95), rgba(15, 23, 43, 0.95)), url(img/carousel-2.jpg);
-            background-size: cover;
-            background-position: center;
-            padding: 100px 0;
-        }
-        
-        .testimonial-card {
-            background: white;
-            border-radius: 12px;
-            padding: 35px;
-            height: 100%;
-            position: relative;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .testimonial-card .stars {
-            color: #FFC107;
-            margin-bottom: 20px;
-            font-size: 15px;
-        }
-        
-        .testimonial-card .quote {
-            font-style: italic;
-            color: #555;
-            line-height: 1.8;
-            margin-bottom: 25px;
-            font-size: 15px;
-            flex-grow: 1;
-            min-height: 140px;
-        }
-        
-        .testimonial-card .author {
-            font-weight: 600;
-            color: #0F172B;
-            margin-bottom: 5px;
-            font-size: 16px;
-        }
-        
-        .testimonial-card .type {
-            color: #777;
-            font-size: 13px;
-        }
-        
-        .quote-icon {
-            position: absolute;
-            right: 25px;
-            bottom: 25px;
-            color: #FEA116;
-            opacity: 0.15;
-            font-size: 50px;
-        }
-        
-        /* Video Section - Local Video */
-        .video-section {
-            position: relative;
-            height: 450px;
-            background: #0F172B;
-            overflow: hidden;
-            border-radius: 10px;
-        }
-        
-        .video-container {
-            width: 100%;
-            height: 100%;
-        }
-        
-        .video-container video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .video-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(15, 23, 43, 0.4);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .video-play-btn {
-            width: 80px;
-            height: 80px;
-            background: #FEA116;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 24px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            border: none;
-        }
-        
-        .video-play-btn:hover {
-            background: #e68a00;
-            transform: scale(1.1);
-            color: white;
-        }
-        
-        /* Button Enhancements */
-        .btn-primary {
-            background: #FEA116;
-            border: none;
-            padding: 14px 35px;
-            transition: all 0.3s ease;
-            font-weight: 500;
-            border-radius: 0;
-            letter-spacing: 0.5px;
-        }
-        
-        .btn-primary:hover {
-            background: #e68a00;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(254, 161, 22, 0.3);
-        }
-        
-        .btn-light {
-            background: white;
-            color: #0F172B;
-            padding: 14px 35px;
-            border-radius: 0;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-        }
-        
-        .btn-light:hover {
-            background: #f8f9fa;
-            transform: translateY(-3px);
-        }
-        
-        /* Responsive Fixes */
-        @media (max-width: 1199px) {
-            .navbar-dark .navbar-nav .nav-link {
-                padding: 0 12px !important;
-                font-size: 13px;
-            }
-        }
-        
-        @media (max-width: 991px) {
-            .navbar-dark {
-                height: auto;
-                padding: 15px 0;
-            }
-            
-            .logo-brand {
-                height: auto;
-                padding: 0;
-            }
-            
-            .navbar-dark .navbar-nav .nav-link {
-                height: auto;
-                padding: 12px 15px !important;
-                border-bottom: none;
-                border-left: 3px solid transparent;
-            }
-            
-            .navbar-dark .navbar-nav .nav-link:hover,
-            .navbar-dark .navbar-nav .nav-link.active {
-                border-left-color: #FEA116;
-                border-bottom: none;
-            }
-            
-            .header-btn {
-                height: auto;
-                margin: 15px 0;
-                justify-content: center;
-            }
-            
-            .room-item {
-                margin-bottom: 40px;
-            }
-            
-            .room-img-container {
-                height: 300px;
-            }
-            
-            .room-description {
-                -webkit-line-clamp: 3;
-                min-height: 85px;
-            }
-            
-            .testimonial-card .quote {
-                min-height: auto;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .logo-brand {
-                gap: 15px;
-            }
-            
-            .logo-brand img {
-                height: 60px;
-            }
-            
-            .brand-name {
-                font-size: 20px;
-            }
-            
-            .brand-tagline {
-                font-size: 10px;
-            }
-            
-            .room-img-container {
-                height: 280px;
-            }
-            
-            .room-description {
-                -webkit-line-clamp: 3;
-                min-height: 80px;
-            }
-            
-            .video-section {
-                height: 350px;
-            }
-        }
-        
-        /* Booking Form */
-        .booking-form {
-            background: white;
-            border-radius: 12px;
-            padding: 30px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-        }
-        
-        /* Section Spacing */
-        .section-padding {
-            padding: 100px 0;
-        }
-        
-        .section-title {
-            position: relative;
-            display: inline-block;
-            font-size: 18px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 25px;
-            color: #FEA116;
-        }
-        
-        .section-title::before {
-            content: "";
-            position: absolute;
-            left: -60px;
-            top: 50%;
-            width: 50px;
-            height: 2px;
-            background: #FEA116;
-        }
-        
-        .section-title::after {
-            content: "";
-            position: absolute;
-            right: -60px;
-            top: 50%;
-            width: 50px;
-            height: 2px;
-            background: #FEA116;
-        }
-        
-        /* Carousel Improvements - Fixed black line issue */
-        .carousel-item {
-            height: 700px;
-        }
-        
-        .carousel-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .carousel-caption {
-            background: rgba(15, 23, 43, 0.7);
-            padding: 50px;
-            border-radius: 10px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .carousel-control-prev,
-        .carousel-control-next {
-            background: rgba(0, 0, 0, 0.3);
-            width: 60px;
-            height: 60px;
-            top: 50%;
-            transform: translateY(-50%);
-            border-radius: 50%;
-        }
-        
-        @media (max-width: 768px) {
-            .carousel-item {
-                height: 500px;
-            }
-            
-            .carousel-caption {
-                padding: 30px;
-            }
-            
-            .carousel-caption h1 {
-                font-size: 28px;
-            }
-            
-            .carousel-control-prev,
-            .carousel-control-next {
-                width: 40px;
-                height: 40px;
-            }
-        }
-    </style>
+    <!-- Inline styles moved to css/style.css -->
 </head>
 
 <body>
@@ -560,7 +41,7 @@
         </div>
     </div>
 
-    <!-- Header -->
+    <!-- Header (standardized) -->
     <div class="container-fluid bg-dark px-0">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark px-0">
@@ -569,7 +50,7 @@
                         <img src="img/logo.png" alt="Shagun Farms">
                         <div class="brand-text">
                             <div class="brand-name"><span class="shagun">SHAGUN</span> <span class="farms">FARMS</span></div>
-                            <div class="brand-tagline">Hotel & Banquet</div>
+                            <div class="brand-tagline">Banquet & Wedding Destination</div>
                         </div>
                     </div>
                 </a>
@@ -580,9 +61,11 @@
                 
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto align-items-center">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="index.html" class="nav-item nav-link">Home</a>
                         <a href="about.html" class="nav-item nav-link">About</a>
+                        <!-- Weddings link removed per request -->
                         <a href="room.html" class="nav-item nav-link">Rooms</a>
+                        <a href="gallery.html" class="nav-item nav-link">Gallery</a>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                         <div class="header-btn">
                             <a href="contact.html" class="btn btn-primary">Plan Your Event</a>
@@ -600,12 +83,13 @@
                 <div class="carousel-item active">
                     <img class="w-100" src="img/carousel-1.jpg" alt="Shagun Farms Luxury Hotel">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <div class="p-3">
-                            <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Luxury Accommodation</h6>
-                            <h1 class="display-3 text-white mb-4 animated slideInDown">Where Every Stay Becomes a Memory</h1>
+                        <div class="hero-caption p-3">
+                            <span class="kicker animated slideInDown">Luxury Accommodation</span>
+                            <h1 class="text-white animated slideInDown">Where Every Stay Becomes a Memory</h1>
+                            <p class="lead text-white mb-4 animated fadeIn">Elegant rooms, curated experiences and event spaces tailored for unforgettable celebrations.</p>
                             <div class="d-flex flex-wrap justify-content-center gap-3">
-                                <a href="room.html" class="btn btn-primary py-md-3 px-md-5 animated slideInLeft">Our Rooms</a>
-                                <a href="contact.html" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Book Your Stay</a>
+                                <a href="room.html" class="btn btn-primary animated slideInLeft">Our Rooms</a>
+                                <a href="https://www.makemytrip.com/hotels/hotel_shagun_farm-details-raipur_chhattisgarh.html?msockid=09f6bebb53ad680829d1a80152cf696b" class="btn btn-light animated slideInRight" target="_blank" rel="noopener">Book Your Stay</a>
                             </div>
                         </div>
                     </div>
@@ -613,12 +97,13 @@
                 <div class="carousel-item">
                     <img class="w-100" src="img/carousel-2.jpg" alt="Shagun Farms Banquet Halls and Rooms">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <div class="p-3">
-                            <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Premium Destination</h6>
-                            <h1 class="display-3 text-white mb-4 animated slideInDown">Banquet Halls & 110 Elegant Rooms</h1>
+                        <div class="hero-caption p-3">
+                            <span class="kicker animated slideInDown">Premium Destination</span>
+                            <h1 class="text-white animated slideInDown">Banquet Halls & 110 Elegant Rooms</h1>
+                            <p class="lead text-white mb-4 animated fadeIn">Host grand weddings and events with refined service and beautifully appointed venues.</p>
                             <div class="d-flex flex-wrap justify-content-center gap-3">
-                                <a href="contact.html" class="btn btn-primary py-md-3 px-md-5 animated slideInLeft">Book Banquet</a>
-                                <a href="room.html" class="btn btn-light py-md-3 px-md-5 animated slideInRight">View Rooms</a>
+                                <a href="contact.html" class="btn btn-primary animated slideInLeft">Book Banquet</a>
+                                <a href="room.html" class="btn btn-light animated slideInRight">View Rooms</a>
                             </div>
                         </div>
                     </div>
@@ -668,7 +153,7 @@
                         </div>
                     </div>
                     <div class="col-lg-2">
-                        <button class="btn btn-primary w-100 py-3">Book Now</button>
+                        <a href="https://www.makemytrip.com/hotels/hotel_shagun_farm-details-raipur_chhattisgarh.html?msockid=09f6bebb53ad680829d1a80152cf696b" class="btn btn-primary w-100 py-3 text-white text-decoration-none d-flex align-items-center justify-content-center" target="_blank" rel="noopener">Book Now</a>
                     </div>
                 </div>
             </div>
@@ -739,7 +224,7 @@
             <div class="row g-4">
                 <!-- Shagun Suite -->
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="room-item">
+                    <div class="room-item card-upmarket">
                         <div class="room-img-container">
                             <img src="img/room-1.jpg" alt="Shagun Suite">
                         </div>
@@ -763,14 +248,14 @@
                             <p class="room-description">Lavish suites ideal for VIP guests with premium furnishings and stunning views. Perfect for special occasions and luxury stays.</p>
                             <div class="d-flex justify-content-between mt-auto">
                                 <a class="btn btn-sm btn-primary rounded py-2 px-4" href="room.html">View Detail</a>
-                                <a class="btn btn-sm btn-dark rounded py-2 px-4" href="contact.html">Book Now</a>
+                                <a class="btn btn-sm btn-dark rounded py-2 px-4" href="https://www.makemytrip.com/hotels/hotel_shagun_farm-details-raipur_chhattisgarh.html?msockid=09f6bebb53ad680829d1a80152cf696b" target="_blank" rel="noopener">Book Now</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Executive Room -->
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="room-item">
+                    <div class="room-item card-upmarket">
                         <div class="room-img-container">
                             <img src="img/room-2.jpg" alt="Executive Room">
                         </div>
@@ -794,14 +279,14 @@
                             <p class="room-description">Spacious, stylish, and perfect for business travelers. Features modern amenities and comfortable workspace.</p>
                             <div class="d-flex justify-content-between mt-auto">
                                 <a class="btn btn-sm btn-primary rounded py-2 px-4" href="room.html">View Detail</a>
-                                <a class="btn btn-sm btn-dark rounded py-2 px-4" href="contact.html">Book Now</a>
+                                <a class="btn btn-sm btn-dark rounded py-2 px-4" href="https://www.makemytrip.com/hotels/hotel_shagun_farm-details-raipur_chhattisgarh.html?msockid=09f6bebb53ad680829d1a80152cf696b" target="_blank" rel="noopener">Book Now</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Deluxe Room -->
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-                    <div class="room-item">
+                    <div class="room-item card-upmarket">
                         <div class="room-img-container">
                             <img src="img/room-3.jpg" alt="Deluxe Room">
                         </div>
@@ -825,7 +310,7 @@
                             <p class="room-description">Cozy and elegant, offering modern amenities and serene comfort for all guests. Ideal for family stays.</p>
                             <div class="d-flex justify-content-between mt-auto">
                                 <a class="btn btn-sm btn-primary rounded py-2 px-4" href="room.html">View Detail</a>
-                                <a class="btn btn-sm btn-dark rounded py-2 px-4" href="contact.html">Book Now</a>
+                                <a class="btn btn-sm btn-dark rounded py-2 px-4" href="https://www.makemytrip.com/hotels/hotel_shagun_farm-details-raipur_chhattisgarh.html?msockid=09f6bebb53ad680829d1a80152cf696b" target="_blank" rel="noopener">Book Now</a>
                             </div>
                         </div>
                     </div>
@@ -893,7 +378,7 @@
             <div class="row g-4">
                 <!-- Review 1 -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="testimonial-card">
+                    <div class="testimonial-card card-upmarket">
                         <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -913,7 +398,7 @@
                 </div>
                 <!-- Review 2 -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="testimonial-card">
+                    <div class="testimonial-card card-upmarket">
                         <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -933,7 +418,7 @@
                 </div>
                 <!-- Review 3 -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="testimonial-card">
+                    <div class="testimonial-card card-upmarket">
                         <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
