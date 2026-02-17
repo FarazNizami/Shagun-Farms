@@ -381,6 +381,50 @@ section {
     transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
+.home-about .about-stat-card {
+    padding: 6px;
+}
+
+.home-about .about-stat-card .border.rounded.text-center {
+    padding: 22px 18px;
+    background: linear-gradient(180deg, #ffffff 0%, #fbfbfb 100%);
+    box-shadow: 0 6px 18px rgba(15, 15, 15, 0.06);
+    border: 1px solid rgba(0,0,0,0.04);
+    border-radius: 12px;
+}
+
+.home-about .about-stat-card i {
+    color: var(--primary);
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.home-about .about-stat-card h3 {
+    color: #262526;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-bottom: 6px;
+}
+
+.home-about .about-stat-card .counter {
+    display: inline-block;
+}
+
+.home-about .about-stat-card .counter.has-plus::after {
+    content: '+';
+    display: inline-block;
+    margin-left: 6px;
+    font-size: 0.7em;
+    vertical-align: baseline;
+    color: #666;
+}
+
+.home-about .about-stat-card:hover .border.rounded.text-center {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(15,15,15,0.08);
+}
+
 .home-about .about-stat-card h3 {
     color: #262526;
     font-family: 'Playfair Display', serif;
