@@ -94,13 +94,12 @@ document.addEventListener('DOMContentLoaded', function() {
         wow.init();
     }
 
-    // Initialize counterUp for any numeric `.counter` elements
+    // Initialize counterUp for any elements with `data-toggle="counter-up"`
     if (typeof jQuery !== 'undefined' && typeof jQuery.fn !== 'undefined' && typeof jQuery.fn.counterUp === 'function') {
-        jQuery('.counter[data-toggle="counter-up"]').each(function() {
-            // preserve initial markup until animation starts
+        jQuery('[data-toggle="counter-up"]').each(function() {
             var $el = jQuery(this);
-            var initial = $el.text();
-            $el.data('counterup-initial', initial);
+            // store original text
+            $el.data('counterup-initial', $el.text());
             $el.counterUp();
         });
     }
