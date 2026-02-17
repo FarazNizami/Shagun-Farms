@@ -1204,3 +1204,139 @@ main,
     color: white;
 }
 
+/* ================================
+   HEADER RESPONSIVENESS HARDENING
+   ================================ */
+
+:root {
+    --header-inline-pad: clamp(14px, 2.2vw, 44px);
+}
+
+/* Keep header full-width on large displays while retaining balanced inner spacing */
+.container-fluid.px-0 {
+    width: 100%;
+}
+
+.container-fluid.px-0 > .container-lg {
+    max-width: none !important;
+    padding-left: var(--header-inline-pad);
+    padding-right: var(--header-inline-pad);
+}
+
+.container-fluid.px-0 .navbar {
+    min-height: 82px;
+    padding: 14px 0;
+}
+
+.container-fluid.px-0 .navbar-brand {
+    margin-left: 0;
+    min-width: 0;
+}
+
+.container-fluid.px-0 .navbar-brand img {
+    height: 56px;
+    width: auto;
+}
+
+.container-fluid.px-0 .navbar-brand span {
+    font-size: clamp(1.2rem, 1.2vw, 1.68rem);
+}
+
+.container-fluid.px-0 .navbar .nav-link {
+    margin: 0 10px;
+    white-space: nowrap;
+}
+
+.container-fluid.px-0 .header-btn {
+    margin-left: 10px;
+}
+
+.container-fluid.px-0 .header-btn .btn-primary {
+    margin-left: 0;
+}
+
+/* Mobile navigation polish with stronger spacing and alignment */
+@media (max-width: 991.98px) {
+    .container-fluid.px-0 > .container-lg {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .container-fluid.px-0 .navbar {
+        min-height: 72px;
+        padding: 12px 0;
+    }
+
+    .container-fluid.px-0 .navbar-brand {
+        gap: 10px;
+    }
+
+    .container-fluid.px-0 .navbar-brand img {
+        height: 42px;
+    }
+
+    .container-fluid.px-0 .navbar-brand span {
+        font-size: clamp(1rem, 4.6vw, 1.3rem);
+    }
+
+    .navbar-toggler {
+        width: 44px;
+        height: 44px;
+        padding: 0.35rem;
+        border-radius: 10px;
+        border: 1px solid rgba(0, 0, 0, 0.16);
+    }
+
+    .navbar-collapse {
+        margin-top: 12px;
+        background: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        border-radius: 14px;
+        padding: 10px 12px 14px;
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    .navbar-nav {
+        align-items: stretch !important;
+        gap: 2px;
+    }
+
+    .container-fluid.px-0 .navbar .nav-link {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 11px 8px;
+        font-size: 1rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .navbar-nav .nav-item:last-of-type .nav-link {
+        border-bottom: 0;
+    }
+
+    .container-fluid.px-0 .header-btn {
+        width: 100%;
+        margin: 12px 0 0;
+    }
+
+    .container-fluid.px-0 .header-btn .btn-primary {
+        display: block;
+        width: 100%;
+        min-height: 46px;
+        border-radius: 10px;
+        padding: 11px 16px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .container-fluid.px-0 > .container-lg {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .container-fluid.px-0 .navbar {
+        min-height: 68px;
+    }
+}
+
