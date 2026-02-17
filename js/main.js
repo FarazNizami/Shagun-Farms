@@ -93,6 +93,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         wow.init();
     }
+
+    // Initialize counterUp for any elements with `data-toggle="counter-up"`
+    if (typeof jQuery !== 'undefined' && typeof jQuery.fn !== 'undefined' && typeof jQuery.fn.counterUp === 'function') {
+        jQuery('[data-toggle="counter-up"]').each(function() {
+            jQuery(this).counterUp();
+        });
+    }
 });
 
 // Function to hide spinner

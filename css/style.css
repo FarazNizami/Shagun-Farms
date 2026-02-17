@@ -209,7 +209,7 @@ img {
     z-index: 3;
     text-align: center;
     color: white;
-    max-width: 900px;
+    max-width: clamp(600px, 60vw, 1100px);
     padding: clamp(20px, 4vw, 40px);
 }
 
@@ -289,6 +289,41 @@ img {
 .hero-btn.solid:hover {
     background: #c9a878;
     border-color: #c9a878;
+}
+
+/* Responsive container and header tweaks for very wide monitors */
+@media (min-width: 1400px) {
+    .container-lg {
+        max-width: 1400px;
+    }
+    .navbar {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .container-lg {
+        max-width: 1600px;
+    }
+}
+
+@media (min-width: 2000px) {
+    .container-lg {
+        max-width: 1920px;
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+}
+
+/* Make navbar brand slightly larger on very wide screens */
+@media (min-width: 1400px) {
+    .navbar-brand img { height: 70px; }
+}
+
+/* Reduce excessive side gaps for header/button groups on ultra-wide monitors */
+@media (min-width: 1200px) {
+    .header-btn { margin-left: 12px; }
 }
 
 /* ================================
