@@ -1210,6 +1210,19 @@ main,
 
 :root {
     --header-inline-pad: clamp(14px, 2.2vw, 44px);
+    --header-content-max: 1680px;
+}
+
+@media (max-width: 1400px) {
+    :root {
+        --header-content-max: 1320px;
+    }
+}
+
+@media (max-width: 1200px) {
+    :root {
+        --header-content-max: 1140px;
+    }
 }
 
 /* Keep header full-width on large displays while retaining balanced inner spacing */
@@ -1218,13 +1231,15 @@ main,
 }
 
 .container-fluid.px-0 > .container-lg {
-    max-width: none !important;
-    padding-left: var(--header-inline-pad);
-    padding-right: var(--header-inline-pad);
+    width: min(100%, var(--header-content-max)) !important;
+    max-width: var(--header-content-max) !important;
+    margin: 0 auto !important;
+    padding: 0 var(--header-inline-pad) !important;
 }
 
 .container-fluid.px-0 .navbar {
     min-height: 82px;
+    width: 100%;
     padding: 14px 0;
 }
 
@@ -1258,8 +1273,9 @@ main,
 /* Mobile navigation polish with stronger spacing and alignment */
 @media (max-width: 991.98px) {
     .container-fluid.px-0 > .container-lg {
-        padding-left: 16px;
-        padding-right: 16px;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 16px !important;
     }
 
     .container-fluid.px-0 .navbar {
@@ -1331,12 +1347,12 @@ main,
 
 @media (max-width: 576px) {
     .container-fluid.px-0 > .container-lg {
-        padding-left: 12px;
-        padding-right: 12px;
+        padding: 0 12px !important;
     }
 
     .container-fluid.px-0 .navbar {
         min-height: 68px;
+        padding: 10px 0;
     }
 }
 
